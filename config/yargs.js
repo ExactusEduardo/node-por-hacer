@@ -18,7 +18,9 @@ const argv = require('yargs')
         descripcion,
         completado
     })
-    .command('listar', 'Imprime las tareas por hacer')
+    .command('listar', 'Imprime las tareas por hacer', {
+        completado
+    })
     .command('borrar', 'Elimina un elemento por hacer', {
         descripcion
     })

@@ -43,10 +43,12 @@ const crear = (descripcion) => {
 
 }
 
-const getListado = () => {
+const getListado = (completado = true) => {
     cargarDB();
 
-    return listadoPorHacer;
+    let nuevoListado = listadoPorHacer.filter(tarea => String(tarea.completado) === String(completado));
+
+    return nuevoListado;
 }
 
 const actualizar = (descripcion, completado = true) => {
